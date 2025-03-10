@@ -8,27 +8,34 @@
 %% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/simpleicons for full list of symbols.
 
 % Change the page layout if you need to
-\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+\geometry{left=1cm,right=1cm,top=1cm,bottom=1cm,columnsep=0.8cm}
 
 % The paracol package lets you typeset columns of text in parallel
 \usepackage{paracol}
+% \usepackage[spanish]{babel}
 
 % Change the font if you want to, depending on whether
 % you're using pdflatex or xelatex/lualatex
 % WHEN COMPILING WITH XELATEX PLEASE USE
 % xelatex -shell-escape -output-driver="xdvipdfmx -z 0" sample.tex
 \iftutex
-  % If using xelatex or lualatex:
-  \setmainfont{Roboto Slab}
-  \setsansfont{Lato}
-  \renewcommand{\familydefault}{\sfdefault}
+% If using xelatex or lualatex:
+\usepackage{polyglossia}
+\setmainlanguage{spanish}
+\setmainfont{Roboto Slab}
+\setsansfont{Lato}
+\renewcommand{\familydefault}{\sfdefault}
+
 \else
-  % If using pdflatex:
+% If using pdflatex:
   \usepackage[rm]{roboto}
   \usepackage[defaultsans]{lato}
   % \usepackage{sourcesanspro}
   \renewcommand{\familydefault}{\sfdefault}
 \fi
+
+\hyphenation{di-se-ño}
+
 
 % Change the colours if you want to
 
@@ -46,21 +53,6 @@
 % \colorlet{accent}{PastelRed}
 % \colorlet{emphasis}{SlateGrey}
 % \colorlet{body}{LightGrey}
-
-% BLUE
-% \definecolor{SlateGrey}{HTML}{2E2E2E}  % Color oscuro neutro → Mantener o usar un azul muy oscuro
-% \definecolor{LightGrey}{HTML}{666666}  % Color gris → Azul grisáceo
-% \definecolor{DarkPastelRed}{HTML}{003366}  % Azul oscuro
-% \definecolor{PastelRed}{HTML}{0077B6}  % Azul medio vibrante
-% \definecolor{GoldenEarth}{HTML}{89CFF0}  % Azul claro
-% \colorlet{name}{black}
-% \colorlet{tagline}{PastelRed}  % Azul medio
-% \colorlet{heading}{DarkPastelRed}  % Azul oscuro
-% \colorlet{headingrule}{GoldenEarth}  % Azul claro
-% \colorlet{subheading}{PastelRed}  % Azul medio
-% \colorlet{accent}{PastelRed}  % Azul medio
-% \colorlet{emphasis}{SlateGrey}  % Mantener oscuro
-% \colorlet{body}{LightGrey}  % Azul grisáceo
 
 % DARKER BLUE
 \definecolor{SlateGrey}{HTML}{2E2E2E}  % Color oscuro neutro → Mantener o usar un azul muy oscuro
@@ -161,22 +153,20 @@
 
 \cvsection{Sobre mí}
 
-Ingeniero de Telecomunicaciones con gran interés por los \textbf{sistemas electrónicos}, los \textbf{sistemas de potencia}, el IoT y la programación. Especializado en \textbf{sistemas empotrados} y en sistemas basados en \textbf{Linux}. Me encanta enfrentar nuevos desafíos y trabajar en un entorno innovador. Comprometido con el aprendizaje continuo, me adapto rápidamente a nuevas tecnologías y metodologías y preparado para desarrollar nuevas habilidades.
+Ingeniero de Telecomunicaciones con gran interés por los \textbf{sistemas electrónicos}, los \textbf{sistemas de potencia}, el IoT y la programación. Especializado en \textbf{sistemas empotrados} y en sistemas basados en \textbf{Linux}. Preparado para enfrentar nuevos desafíos y trabajar en un entorno innovador. Comprometido con el aprendizaje continuo, me adapto rápidamente a nuevas tecnologías y metodologías y preparado para desarrollar nuevas habilidades.
 
 % Start a 2-column paracol. Both the left and right columns will automatically
 % break across pages if things get too long.
 \begin{paracol}{2}
 
-
 \cvsection{Experiencia}
 
-\cvevent{Desarrollador Hardware y Firmware}{TycheTools}{Febrero 2020 -- actualidad}{Madrid, ES}
+\cvevent{Desarrollador Hardware y Firmware}{TycheTools}{Feb 2020 -- actualidad}{Madrid, ES}
 Empresa desarrolladora de sensores ambientales para \textbf{centros de datos}, control de sistemas de refrigeración y optimización de costes de operación.
 
 \begin{itemize}
-\item \textbf{Desarrollo de hardware} analógico y digital (toma de requisitos, diseño, desarrollo y puesta en mercado de varios dispositivos). Captura de esquemáticos, diseño de PCB, revisión de HW. Integración de PCBs en diseños mecánicos.
-\item \textbf{Ensamblado de PCBs:} soldadura manual TH, SMD (0402), testing HW.
-\item \textbf{Compra de componentes} (Mouser, RS, Farnell, …).
+\item \textbf{Desarrollo de hardware} analógico y digital (toma de requisitos, diseño, desarrollo y puesta en mercado de varios dispositivos). Captura de esquemáticos, selección y compra de componentes, diseño de PCB, test y revisión de HW. Integración de PCBs en diseños mecánicos.
+\item \textbf{Ensamblado de PCBs:} soldadura manual TH, SMD (0402).
 \item \textbf{Gestión de compras}, \textbf{comunicación con proveedores}, \textbf{RFQs}.
 \item \textbf{Desarrollo de firmware} para sistemas empotrados (principalmente para nRF52).
 \item Comunicaciones \textbf{Bluetooth 5.0 Mesh}.
@@ -186,30 +176,68 @@ Empresa desarrolladora de sensores ambientales para \textbf{centros de datos}, c
 
 \divider
 
-\cvevent{Prácticas de investigación electrónica}{GreenLSI (Departamento de Ingeniería Electrónica, ETSIT)}{Septiembre 2019 -- Febrero 2020}{Madrid, ES}
+\cvevent{Prácticas de investigación electrónica}{GreenLSI (Departamento de Ingeniería Electrónica, ETSIT)}{Sept 2019 -- Feb 2020}{Madrid, ES}
 \begin{itemize}
 \item Investigación y desarrollo de redes Bluetooth Mesh Mesh basados en microcontroladores Nordic nRF52.
 \end{itemize}
 
+\cvsection{Competencias técnicas}
 
-\cvsection{Capacidades técnicas}
+\cvtag{\simpleicon{c} C/C++}
+\cvtag{\simpleicon{python} Python}
+\cvtag{\simpleicon{javascript} JS}
+\cvtag{\simpleicon{dart} Dart}
 
-\begin{itemize}
-    \setlength{\itemindent}{0.5em}
-    \item Lenguajes de programación: C/C++, Python, JS, Dart
-    \item Microcontroladores: Nordic, ESP, AVR, PIC, ST
-    \item Protocolos: I2C, SPI, UART, WiFi, BLE, MQTT, Modbus, SNMP, NFC, LoRa, SSH, RS232, RS485
-    \item Gestión: Jira, Dolibarr, Holded
-    \item Git (Github/Gitlab/Bitbucket), Bash, Linux, Docker, Yocto, LaTeX, Markdown, PlatformIO, Makefile
-    \item KiCad, Autodesk Fusion 360
-    \item VSCode, CAD, Inkscape, Blender
-    \item API REST, NGINX, desarrollo web, SQL, Django, FastAPI, LVGL, Flutter, Raspberrys
-    \item Sistemas de medición de potencia trifásica
-    \item Desarrollo de producto, diseño 3D, diseño gráfico
-\end{itemize}
+\cvtag{\simpleicon{arm} ARM}
+\cvtag{\simpleicon{nordicsemiconductor} Nordic}
+\cvtag{\simpleicon{espressif} ESP}
+\cvtag{\simpleicon{stmicroelectronics} ST}
+\cvtag{AVR}
+\cvtag{PIC}
+
+\cvtag{I2C}
+\cvtag{SPI}
+\cvtag{UART}
+\cvtag{RS232}
+\cvtag{RS485}
+\cvtag{WiFi}
+\cvtag{BLE}
+\cvtag{LoRa}
+\cvtag{NFC}
+\cvtag{MQTT}
+\cvtag{Modbus}
+\cvtag{SNMP}
+
+\cvtag{\simpleicon{git} Git}
+\cvtag{\simpleicon{gnubash} Bash}
+\cvtag{\simpleicon{linux} Linux}
+\cvtag{\simpleicon{makefile} Makefile}
+\cvtag{\simpleicon{docker} Docker}
+\cvtag{\simpleicon{yocto} Yocto}
+\cvtag{\simpleicon{latex} \LaTeX}
+\cvtag{\simpleicon{markdown} Markdown}
+\cvtag{\simpleicon{platformio} PlatformIO}
+
+\cvtag{\simpleicon{kicad} KiCad}
+\cvtag{2D/3D CAD}
+\cvtag{\simpleicon{blender} Blender}
+
+\cvtag{API REST}
+\cvtag{\simpleicon{nginx} NGINX}
+\cvtag{\simpleicon{mysql} SQL}
+\cvtag{Desarrollo Web}
+\cvtag{Django}
+\cvtag{FastAPI}
+\cvtag{\simpleicon{lvgl} LVGL}
+\cvtag{\simpleicon{flutter} Flutter}
+\cvtag{\simpleicon{raspberrypi} Raspberrys}
+
+\cvtag{Sistemas de medición de potencia trifásica}
+
+\cvtag{\simpleicon{jira} Jira}
+\cvtag{Desarrollo de producto}
 
 \switchcolumn
-
 
 \cvsection{Educación}
 
@@ -227,9 +255,11 @@ Empresa desarrolladora de sensores ambientales para \textbf{centros de datos}, c
 \cvsection{Idiomas}
 
 \cvskill{Español}{5}
+
 \divider
 
 \cvskill{Inglés}{4}
+
 \medskip
 
 \cvsection{Softskills}
@@ -237,7 +267,7 @@ Empresa desarrolladora de sensores ambientales para \textbf{centros de datos}, c
 \begin{itemize}
     \setlength{\itemindent}{0.5em}
     \item Trabajo en equipo
-    \item Solucionador de problemas
+    \item Solución de problemas
     \item Metodilogías Agile, Scrum
     \item Observador
     \item Organizado
@@ -247,11 +277,10 @@ Empresa desarrolladora de sensores ambientales para \textbf{centros de datos}, c
 
 \begin{itemize}
     \setlength{\itemindent}{0.5em}
-    \item Proyectos \textbf{"Do It Yourself”}, Impresión 3D, servicios \textbf{self-hosted} (Home Assistant, Immich, Frigate, Mosquitto, InfluxDB, Grafana).
+    \item Proyectos \textbf{"Do It Yourself”}, Impresión 3D, servicios \textbf{self-hosted} (Home Assistant, Immich, Frigate, InfluxDB, Grafana).
     \item Electrónica, reparación de equipos.
-    \item Permiso de \textbf{conducción B}.
+    \item Permiso de \textbf{conducción B} y \textbf{coche propio}.
 \end{itemize}
-
 
 % \cvsection{Projects}
 
@@ -320,13 +349,9 @@ Empresa desarrolladora de sensores ambientales para \textbf{centros de datos}, c
 % \cvsection{Most Proud of}
 
 % \cvachievement{\faTrophy}{Fantastic Achievement}{and some details about it}
-
 % \divider
-
 % \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
-
 % \divider
-
 % \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
 
 % \cvsection{Strengths}
@@ -336,13 +361,10 @@ Empresa desarrolladora de sensores ambientales para \textbf{centros de datos}, c
 % \cvtag{Hard-working}
 % \cvtag{Eye for detail}\\
 % \cvtag{Motivator \& Leader}
-
 % \divider\smallskip
-
 % \cvtag{C++}
 % \cvtag{Embedded Systems}\\
 % \cvtag{Statistical Analysis}
-
 
 %% Yeah I didn't spend too much time making all the
 %% spacing consistent... sorry. Use \smallskip, \medskip,
@@ -361,8 +383,6 @@ Empresa desarrolladora de sensores ambientales para \textbf{centros de datos}, c
 % \cvref{Prof.\ Gamma Delta}{Institute}{g.delta@university.edu}
 % {Address Line 1\\Address line 2}
 
-
 \end{paracol}
-
 
 \end{document}
