@@ -12,7 +12,6 @@
 
 % The paracol package lets you typeset columns of text in parallel
 \usepackage{paracol}
-% \usepackage[spanish]{babel}
 
 % Change the font if you want to, depending on whether
 % you're using pdflatex or xelatex/lualatex
@@ -20,8 +19,6 @@
 % xelatex -shell-escape -output-driver="xdvipdfmx -z 0" sample.tex
 \iftutex
 % If using xelatex or lualatex:
-\usepackage{polyglossia}
-\setmainlanguage{spanish}
 \setmainfont{Roboto Slab}
 \setsansfont{Lato}
 \renewcommand{\familydefault}{\sfdefault}
@@ -33,9 +30,6 @@
   % \usepackage{sourcesanspro}
   \renewcommand{\familydefault}{\sfdefault}
 \fi
-
-\hyphenation{di-se-ño}
-
 
 % Change the colours if you want to
 
@@ -106,7 +100,7 @@
 
 \begin{document}
 \name{Guillermo González Martín}
-\tagline{Ingeniero de telecomunicaciones, hardware y firmware}
+\tagline{Telecommunication, hardware \& firmware engineer}
 %% You can add multiple photos on the left or right
 % \photoR{2.8cm}{Globe_High}
 % \photoL{2.5cm}{Yacht_High,Suitcase_High}
@@ -151,38 +145,37 @@
 %% Set the left/right column width ratio to 6:4.
 \columnratio{0.55}
 
-\cvsection{Sobre mí}
+\cvsection{About me}
 
-Ingeniero de Telecomunicaciones con gran interés por los \textbf{sistemas electrónicos}, los \textbf{sistemas de potencia}, el IoT y la programación. Especializado en \textbf{sistemas empotrados} y en sistemas basados en \textbf{Linux}. Preparado para enfrentar nuevos desafíos y trabajar en un entorno innovador. Comprometido con el aprendizaje continuo, me adapto rápidamente a nuevas tecnologías y metodologías y preparado para desarrollar nuevas habilidades.
+\textbf{Telecommunications Engineer} with a strong interest in \textbf{electronic systems}, \textbf{power systems}, IoT, and programming. Specialized in \textbf{embedded systems} and Linux-based systems. Ready to take on new challenges and work in an innovative environment. Committed to continuous learning, I quickly adapt to new technologies and methodologies and am eager to develop new skills.
 
 % Start a 2-column paracol. Both the left and right columns will automatically
 % break across pages if things get too long.
 \begin{paracol}{2}
 
-\smallskip % Por la tilde de Educación
-\cvsection{Experiencia}
+\cvsection{Experience}
 
-\cvevent{Desarrollador Hardware y Firmware}{TycheTools}{Feb 2020 -- actualidad}{Madrid, ES}
-Empresa desarrolladora de sensores ambientales para \textbf{centros de datos}, control de sistemas de refrigeración y optimización de costes de operación.
+\cvevent{Hardware \& Firmware developer}{TycheTools}{Feb 2020 -- ongoing}{Madrid, ES}
+Company developing environmental sensors for \textbf{data centers}, cooling system control, and operation cost optimization.
 
 \begin{itemize}
-\item \textbf{Desarrollo de hardware} analógico y digital (toma de requisitos, diseño, desarrollo y puesta en mercado de varios dispositivos). Captura de esquemáticos, selección y compra de componentes, diseño de PCB, test y revisión de HW. Integración de PCBs en diseños mecánicos.
-\item \textbf{Ensamblado de PCBs:} soldadura manual TH, SMD (0402).
-\item \textbf{Gestión de compras}, \textbf{comunicación con proveedores}, \textbf{RFQs}.
-\item \textbf{Desarrollo de firmware} para sistemas empotrados (principalmente para nRF52).
-\item Comunicaciones \textbf{Bluetooth 5.0 Mesh}.
-\item Desarrollo de sistema \textbf{Linux basado en Yocto}.
-\item Experiencia en \textbf{centros de datos}: optimización de refrigeración y consumo energético.
+    \item \textbf{Hardware development} (analog and digital) including requirements gathering, design, development, and market launch of several devices. Schematic capture, component selection and purchasing, PCB design, testing, and HW review. Integration of PCBs into mechanical designs.
+    \item \textbf{PCB assembly:} manual soldering TH, SMD (0402).
+    \item \textbf{Purchasing management}, \textbf{communication with suppliers}, \textbf{RFQs}.
+    \item \textbf{Firmware development} for embedded systems (mainly for nRF52).
+    \item \textbf{Bluetooth 5.0 Mesh} communications.
+    \item Development of a \textbf{Linux-based system using Yocto}.
+    \item Experience in \textbf{data centers}: cooling optimization and energy consumption management.
 \end{itemize}
 
 \divider
 
-\cvevent{Prácticas de investigación electrónica}{GreenLSI (Departamento de Ingeniería Electrónica, ETSIT)}{Sept 2019 -- Feb 2020}{Madrid, ES}
+\cvevent{Electronic Research Internship}{GreenLSI (Department of Electronic Engineering, ETSIT)}{Sept 2019 -- Feb 2020}{Madrid, ES}
 \begin{itemize}
-\item Investigación y desarrollo de redes Bluetooth Mesh Mesh basados en microcontroladores Nordic nRF52.
+    \item Research and development of Bluetooth Mesh networks based on Nordic nRF52 microcontrollers.
 \end{itemize}
 
-\cvsection{Competencias técnicas}
+\cvsection{Technical skills}
 
 \cvtag{C/C++}
 \cvtag{\simpleicon{python} Python}
@@ -226,64 +219,64 @@ Empresa desarrolladora de sensores ambientales para \textbf{centros de datos}, c
 \cvtag{API REST}
 \cvtag{\simpleicon{nginx} NGINX}
 \cvtag{\simpleicon{mysql} SQL}
-\cvtag{Desarrollo Web}
+\cvtag{Web development}
 \cvtag{Django}
 \cvtag{FastAPI}
-\cvtag{\simpleicon{lvgl} LVGL}
+\cvtag{LVGL}
 \cvtag{\simpleicon{flutter} Flutter}
 \cvtag{\simpleicon{raspberrypi} Raspberrys}
 
-\cvtag{Sistemas de medición de potencia trifásica}
+\cvtag{Three-phase power measurement systems}
 
 \cvtag{\simpleicon{jira} Jira}
-\cvtag{Desarrollo de producto}
+\cvtag{Product development}
 
 \switchcolumn
 
-\cvsection{Educación}
+\cvsection{Education}
 
-\cvevent{Máster en Ingeniería de Telecomunicaciones}{Universidad Politécnica de Madrid}{2019 --  2020}{Madrid, ES}
-\textbf{Matrícula de Honor} en Trabajo Fin de Master: “Diseño e implementación de una red mallada de sensores para la monitorización de características eléctricas”
-
-\divider
-
-\cvevent{Grado en Ingeniería de Tecnologías y Servicios de Telecomunicaciones}{Universidad Politécnica de Madrid}{2015 -- 2019}{Madrid, ES}
+\cvevent{Master's in Telecommunications Engineering}{Universidad Politécica de Madrid}{2019 -- 2020}{Madrid, ES}
+\textbf{Honors} in Master's Thesis: “Design and implementation of a mesh sensor network for monitoring electrical characteristics”
 
 \divider
 
-\cvevent{Bachillerato científico}{Eurocolegio Casvi}{2013 -- 2015}{Villaviciosa, Madrid}
-
-\cvsection{Idiomas}
-
-\cvskill{Español}{5}
+\cvevent{Bachelor's in Telecommunications Technologies and Services Engineering}{Universidad Politécica de Madrid}{2015 -- 2019}{Madrid, ES}
 
 \divider
 
-\cvskill{Inglés}{4}
+\cvevent{Scientific Baccalaureate}{Eurocolegio Casvi}{2013 -- 2015}{Villaviciosa, Madrid}
+
+
+\cvsection{Languages}
+
+\cvskill{Spanish}{5}
+
+\divider
+
+\cvskill{English}{4}
 
 \medskip
 
 \cvsection{Softskills}
 
 \begin{itemize}
-    \setlength{\itemindent}{0.5em}
-    \item Trabajo en equipo
-    \item Solución de problemas
-    \item Metodilogías Agile, Scrum
-    \item Observador
-    \item Organizado
+  \setlength{\itemindent}{0.5em}
+  \item Teamwork
+  \item Problem-solving
+  \item Agile Methodologies, Scrum
+  \item Observant
+  \item Organized
 \end{itemize}
 
-\cvsection{Otros}
+\cvsection{Others}
 
 \begin{itemize}
-    \setlength{\itemindent}{0.5em}
-    \item Proyectos \textbf{"Do It Yourself”}, Impresión 3D, servicios \textbf{self-hosted}:
-    \cvtag{\simpleicon{homeassistant} Home Assistant} \cvtag{\simpleicon{immich} Immich} \cvtag{\simpleicon{influxdb} InfluxDB} \cvtag{\simpleicon{grafana} Grafana} \cvtag{Frigate}
-    \item Electrónica, reparación de equipos.
-    \item Permiso de \textbf{conducción B} y \textbf{coche propio}.
+  \setlength{\itemindent}{0.5em}
+  \item \textbf{Do It Yourself} projects, 3D printing, \textbf{self-hosted} services:
+  \cvtag{\simpleicon{homeassistant} Home Assistant} \cvtag{\simpleicon{immich} Immich} \\ \cvtag{\simpleicon{influxdb} InfluxDB} \cvtag{\simpleicon{grafana} Grafana} \cvtag{Frigate}
+  \item Electronics, equipment repair.
+  \item \textbf{Driving license B} and \textbf{own car}.
 \end{itemize}
-
 % \cvsection{Projects}
 
 % \cvevent{Project 1}{Funding agency/institution}{}{}
