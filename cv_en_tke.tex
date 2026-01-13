@@ -1,0 +1,349 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% CV Guillermo González Martín 01/2026 %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+%% AltaCV uses the fontawesome5 and simpleicons packages.
+%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/simpleicons for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=1cm,top=1cm,bottom=1cm,columnsep=0.8cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+% WHEN COMPILING WITH XELATEX PLEASE USE
+% xelatex -shell-escape -output-driver="xdvipdfmx -z 0" sample.tex
+\iftutex
+% If using xelatex or lualatex:
+\setmainfont{Roboto Slab}
+\setsansfont{Lato}
+\renewcommand{\familydefault}{\sfdefault}
+
+\else
+% If using pdflatex:
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Change the colours if you want to
+
+\definecolor{SlateGrey}{HTML}{2E2E2E}  % Color oscuro neutro → Mantener o usar un azul muy oscuro
+\definecolor{LightGrey}{HTML}{666666}  % Color gris → Azul grisáceo
+\definecolor{DarkPastelRed}{HTML}{001F33}  % Azul muy oscuro
+\definecolor{PastelRed}{HTML}{005B8F}  % Azul medio más oscuro
+\definecolor{GoldenEarth}{HTML}{7AA9D6}  % Azul claro ligeramente más oscuro
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}  % Azul medio
+\colorlet{heading}{DarkPastelRed}  % Azul muy oscuro
+\colorlet{headingrule}{GoldenEarth}  % Azul claro
+\colorlet{subheading}{PastelRed}  % Azul medio
+\colorlet{accent}{PastelRed}  % Azul medio
+\colorlet{emphasis}{SlateGrey}  % Mantener oscuro
+\colorlet{body}{LightGrey}  % Azul grisáceo
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\cvItemMarker}{{\small\textbullet}}
+\renewcommand{\cvRatingMarker}{\faCircle}
+% ...and the markers for the date/location for \cvevent
+% \renewcommand{\cvDateMarker}{\faCalendar*[regular]}
+% \renewcommand{\cvLocationMarker}{\faMapMarker*}
+
+% If your CV/résumé is in a language other than English,
+% then you probably want to change these so that when you
+% copy-paste from the PDF or run pdftotext, the location
+% and date marker icons for \cvevent will paste as correct
+% translations. For example Spanish:
+% \renewcommand{\locationname}{Ubicación}
+% \renewcommand{\datename}{Fecha}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want to use an author-year reference style like APA(6)
+%% for your publication list
+% \input{pubs-authoryear.cfg}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want an originally numerical reference style like IEEE
+%% for your publication list
+% \input{pubs-num.cfg}
+
+%% sample.bib contains your publications
+% \addbibresource{sample.bib}
+
+\begin{document}
+\name{Guillermo González Martín}
+\tagline{Embedded Software Engineer}
+%% You can add multiple photos on the left or right
+% \photoR{2.8cm}{Globe_High}
+% \photoL{2.5cm}{Yacht_High,Suitcase_High}
+
+\personalinfo{%
+  % Not all of these are required!
+  \email{guille.gonzalez.13@gmail.com}
+  \phone{+34 610 24 82 57}
+  % \mailaddress{Madrid, España}
+  \location{Madrid, España}
+  % \homepage{ggonzalezm.es}
+  % \twitter{@twitterhandle}
+  % \xtwitter{@x-handle}
+  \linkedin{guillegonzzalez}
+  \github{guillegonzzalez}
+  % \orcid{0000-0000-0000-0000}
+  %% You can add your own arbitrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
+
+  %% Or you can declare your own field with
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+  % \gitlab{your_id}
+  %%
+  %% For services and platforms like Mastodon where there isn't a
+  %% straightforward relation between the user ID/nickname and the hyperlink,
+  %% you can use \printinfo directly e.g.
+  % \printinfo{\faMastodon}{@username@instace}[https://instance.url/@username]
+  %% But if you absolutely want to create new dedicated info fields for
+  %% such platforms, then use \NewInfoField* with a star:
+  % \NewInfoField*{mastodon}{\faMastodon}
+  %% then you can use \mastodon, with TWO arguments where the 2nd argument is
+  %% the full hyperlink.
+  % \mastodon{@username@instance}{https://instance.url/@username}
+}
+
+\makecvheader
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.55}
+
+\cvsection{About me}
+
+Embedded Software Engineer with solid experience in \textbf{C development} for embedded and \textbf{Linux-based systems}, working close to \textbf{electrical and electronic hardware}. Background in industrial IoT, real-time systems and low-level drivers, with experience in both startup environments and large, regulated companies. Strong interest in industrial systems, electronics and safety-critical applications.
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+\cvsection{Experience}
+
+
+\cvevent{Software Engineer}{Alten (Airbus project)}{May 2025 -- ongoing}{Madrid, Spain}
+\begin{itemize}
+  \item Embedded software development in C for safety-critical systems and Python scripting.
+  \item Use of RTOS such as PikeOS and VxWorks.
+  \item Involvement in design, development, QA and testing activities in a large industrial organization.
+\end{itemize}
+
+\divider
+
+\cvevent{Hardware \& Firmware developer}{TycheTools}{Feb 2020 -- May 2025}{Madrid, Spain}
+Company developing environmental sensors for \textbf{data centers}, cooling system control, and operation cost optimization.
+
+\begin{itemize}
+    \item \textbf{Hardware / Electronics:} Schematic capture, PCB design, HW reviews. PCB bring-up and testing. Integration of PCBs into mechanical designs.
+    \item \textbf{Firmware / Drivers:} Firmware development in C for ARM-based microcontrollers. Development of low-level drivers and peripheral integration. Communication protocols (BLE Mesh, UART, SPI, I2C, etc.).
+    \item \textbf{Linux / Systems:} Development of Linux-based systems using Yocto. Interaction between embedded firmware and Linux systems.
+\end{itemize}
+
+\divider
+
+\cvevent{Electronic Research Internship}{GreenLSI (Department of Electronic Engineering, ETSIT)}{Sept 2019 -- Feb 2020}{Madrid, Spain}
+\begin{itemize}
+    \item Research and development of Bluetooth Mesh networks based on Nordic nRF52 microcontrollers.
+\end{itemize}
+
+\cvsection{Technical skills}
+
+\cvtag{C/C++}
+\cvtag{\simpleicon{python} Python}
+
+\cvtag{ARM}
+\cvtag{\simpleicon{nordicsemiconductor} Nordic}
+\cvtag{\simpleicon{espressif} ESP}
+\cvtag{AVR}
+\cvtag{PIC}
+
+\cvtag{\simpleicon{linux} Linux}
+\cvtag{\simpleicon{yocto} Yocto}
+\cvtag{\simpleicon{gnubash} Bash}
+\cvtag{\simpleicon{git} Git}
+\cvtag{\simpleicon{make} Makefile}
+
+\cvtag{Serial comms (I2C, SPI, UART, RS, avionics protocols, etc.)}
+\cvtag{WiFi}
+\cvtag{BLE}
+\cvtag{LoRa}
+\cvtag{NFC}
+\cvtag{MQTT}
+\cvtag{Modbus}
+\cvtag{SNMP}
+
+\cvtag{KiCad}
+\cvtag{API REST}
+\cvtag{\simpleicon{mysql} SQL}
+\cvtag{Web (Django, FastAPI)}
+\cvtag{LVGL}
+\cvtag{\simpleicon{jira} Jira (Agile)}
+
+\switchcolumn
+
+\cvsection{Education}
+
+\cvevent{Master's in Telecommunications Engineering}{Universidad Politécica de Madrid}{2019 -- 2020}{Madrid, ES}
+\textbf{Honors} in Master's Thesis: “Design and implementation of a mesh sensor network for monitoring electrical characteristics”
+
+\divider
+
+\cvevent{Bachelor's in Telecommunications Technologies and Services Engineering}{Universidad Politécica de Madrid}{2015 -- 2019}{Madrid, ES}
+
+\divider
+
+\cvevent{Scientific Baccalaureate}{Eurocolegio Casvi}{2013 -- 2015}{Villaviciosa, Madrid}
+
+\cvsection{Languages}
+
+\cvskill{Spanish}{5}
+
+\divider
+
+\cvskill{English}{4}
+
+\medskip
+
+\cvsection{Softskills}
+
+\begin{itemize}
+  \setlength{\itemindent}{0.5em}
+  \item Teamwork
+  \item Problem-solving
+  \item Agile Methodologies, Scrum
+  \item Observant
+  \item Organized
+\end{itemize}
+
+\cvsection{Others}
+
+\begin{itemize}
+  \setlength{\itemindent}{0.5em}
+  \item \textbf{Do It Yourself} projects, 3D printing, \textbf{self-hosted} services:
+  \cvtag{\simpleicon{homeassistant} Home Assistant} \cvtag{\simpleicon{immich} Immich} \\ \cvtag{\simpleicon{influxdb} InfluxDB} \cvtag{\simpleicon{grafana} Grafana} \cvtag{Frigate}
+  \item Strong interest in electronics, system troubleshooting and equipment repair.
+  \item \textbf{Driving license B} and \textbf{own car}.
+\end{itemize}
+% \cvsection{Projects}
+
+% \cvevent{Project 1}{Funding agency/institution}{}{}
+% \begin{itemize}
+% \item Details
+% \end{itemize}
+
+% \divider
+
+% \cvevent{Project 2}{Funding agency/institution}{Project duration}{}
+% A short abstract would also work.
+
+% \medskip
+
+% \cvsection{A Day of My Life}
+
+% % Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+% % \wheelchart{outer radius}{inner radius}{
+% % comma-separated list of value/text width/color/detail}
+% \wheelchart{1.5cm}{0.5cm}{%
+%   6/8em/accent!30/{Sleep,\\beautiful sleep},
+%   3/8em/accent!40/Hopeful novelist by night,
+%   8/8em/accent!60/Daytime job,
+%   2/10em/accent/Sports and relaxation,
+%   5/6em/accent!20/Spending time with family
+% }
+
+% use ONLY \newpage if you want to force a page break for
+% ONLY the current column
+% \newpage
+
+% \cvsection{Publications}
+
+%% Specify your last name(s) and first name(s) as given in the .bib to automatically bold your own name in the publications list.
+%% One caveat: You need to write \bibnamedelima where there's a space in your name for this to work properly; or write \bibnamedelimi if you use initials in the .bib
+%% You can specify multiple names, especially if you have changed your name or if you need to highlight multiple authors.
+% \mynames{Lim/Lian\bibnamedelima Tze,
+%   Wong/Lian\bibnamedelima Tze,
+%   Lim/Tracy,
+%   Lim/L.\bibnamedelimi T.}
+%% MAKE SURE THERE IS NO SPACE AFTER THE FINAL NAME IN YOUR \mynames LIST
+
+% \nocite{*}
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+
+% \divider
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faFile*[regular]}{Journal Articles}},type=article]
+
+% \divider
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faUsers}{Conference Proceedings}},type=inproceedings]
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+% \switchcolumn
+
+% \cvsection{My Life Philosophy}
+
+% \begin{quote}
+% ``Something smart or heartfelt, preferably in one sentence.''
+% \end{quote}
+
+% \cvsection{Most Proud of}
+
+% \cvachievement{\faTrophy}{Fantastic Achievement}{and some details about it}
+% \divider
+% \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
+% \divider
+% \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
+
+% \cvsection{Strengths}
+
+% % Don't overuse these \cvtag boxes — they're just eye-candies and not essential. If something doesn't fit on a single line, it probably works better as part of an itemized list (probably inlined itemized list), or just as a comma-separated list of strengths.
+
+% \cvtag{Hard-working}
+% \cvtag{Eye for detail}\\
+% \cvtag{Motivator \& Leader}
+% \divider\smallskip
+% \cvtag{C++}
+% \cvtag{Embedded Systems}\\
+% \cvtag{Statistical Analysis}
+
+%% Yeah I didn't spend too much time making all the
+%% spacing consistent... sorry. Use \smallskip, \medskip,
+%% \bigskip, \vspace etc to make adjustments.
+% \medskip
+
+
+% \cvsection{Referees}
+
+% % \cvref{name}{email}{mailing address}
+% \cvref{Prof.\ Alpha Beta}{Institute}{a.beta@university.edu}
+% {Address Line 1\\Address line 2}
+
+% \divider
+
+% \cvref{Prof.\ Gamma Delta}{Institute}{g.delta@university.edu}
+% {Address Line 1\\Address line 2}
+
+\end{paracol}
+
+\end{document}
